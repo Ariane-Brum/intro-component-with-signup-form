@@ -167,7 +167,7 @@ form div.active::after {
   color: var(--grayish-blue);
 }
 
-.button p {
+.button small span {
   color: var(--red);
   font-weight: 700;
 }

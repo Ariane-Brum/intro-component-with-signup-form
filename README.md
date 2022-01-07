@@ -44,8 +44,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution](https://www.frontendmentor.io/solutions/signup-form-using-css-grid-flexbox-html5-and-js-owWQXGRnK)
+- Live Site URL: [intro-component-with-signup-form](https://ariane-brum.github.io/intro-component-with-signup-form/)
 
 ### Built with
 
