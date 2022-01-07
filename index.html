@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="info">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </section>
+        <section class="form">
+          <div class="form-info">
+            <span>
+              Try it free 7 days
+              <small>then $20/mo. thereafter</small></span
+            >
+          </div>
+          <form action="" onsubmit="Form.handleSubmit(event)">
+            <div class="input-group">
+              <div class="input-item-firstName">
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="Name"
+                  aria-label="Name"
+                />
+                <small id="firstNameSmall"></small>
+              </div>
+
+              <div class="input-item-lastName">
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  placeholder="Last Name"
+                  aria-label="lastName"
+                />
+                <small id="lastNameSmall"></small>
+              </div>
+              <div class="input-item-email">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Addres"
+                  aria-label="Email Addres"
+                />
+                <small id="emailSmall"></small>
+              </div>
+              <div class="input-item-password">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  aria-label="Password"
+                />
+                <small id="passwordSmall"></small>
+              </div>
+            </div>
+            <div class="button">
+              <button>Claim your free trial By</button>
+              <small
+                >clicking the button, you are agreeing to our
+                <p>Terms and Services</p></small
+              >
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/Ariane-Brum" target="_blank">Ariane Brum</a
+        >.
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
