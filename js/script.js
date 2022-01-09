@@ -32,50 +32,67 @@ const Form = {
       Form.inputItemFirstName.classList.add("active");
       Form.firstNameSmall.innerHTML = "First Name cannot empty";
       Form.name.classList.add("active");
-    } else {
+    }
+    Form.name.addEventListener("blur", () => {
       Form.firstNameSmall.innerHTML = "";
       Form.inputItemFirstName.classList.remove("active");
       Form.name.classList.remove("active");
-    }
+    });
 
     if (lastName.length === 0) {
       Form.inputItemLastName.classList.add("active");
       Form.lastNameSmall.innerHTML = "Last Name cannot empty";
       Form.lastName.classList.add("active");
-    } else {
+    }
+    Form.lastName.addEventListener("blur", () => {
       Form.lastNameSmall.innerHTML = "";
       Form.inputItemLastName.classList.remove("active");
       Form.lastName.classList.remove("active");
-    }
+    });
 
     if (email.length === 0) {
       Form.inputItemEmail.classList.add("active");
       Form.emailSmall.innerHTML = "Looks like this is not an email";
       Form.email.classList.add("active");
-    } else {
+    }
+    Form.email.addEventListener("blur", () => {
       Form.emailSmall.innerHTML = "";
       Form.inputItemEmail.classList.remove("active");
       Form.email.classList.remove("active");
-    }
+    });
 
     if (password.length === 0) {
       Form.inputItemPassword.classList.add("active");
       Form.passwordSmall.innerHTML = "Password cannot empty";
       Form.password.classList.add("active");
-    } else {
+    }
+    Form.password.addEventListener("blur", () => {
       Form.passwordSmall.innerHTML = "";
       Form.inputItemPassword.classList.remove("active");
       Form.password.classList.remove("active");
-    }
+    });
+  },
+
+  clearFields() {
+    Form.name.value = "";
+    Form.lastName.value = "";
+    Form.email.value = "";
+    Form.password.value = "";
   },
 
   handleSubmit(event) {
     event.preventDefault();
 
-    try {
+    const { name, lastName, email, password } = Form.getValues();
+    if (
+      name.trim() === "" ||
+      lastName.trim() === "" ||
+      email.trim() === "" ||
+      password.trim() === ""
+    ) {
       Form.validateFields();
-    } catch (error) {
-      console.log(error);
+    } else {
+      Form.clearFields();
     }
   },
 };
